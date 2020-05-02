@@ -1,4 +1,4 @@
 FROM bzohdy/java
 MAINTAINER bzohdy
-RUN echo "y"|/bin/bash -l -c 'sdk install maven && sdk flush archives && sdk flush temp';
+RUN apk add --no-cache maven
 ENTRYPOINT /bin/bash
